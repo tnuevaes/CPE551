@@ -21,7 +21,7 @@ G: Goldenrod, 1 units of pollen
 You have 5 scout bees left, 5 worker bees left, and have harvested 0 units of pollen.
 H is the hive, U is a used flower
   0 1 2 3 4 5 6 7 8 9
-0| | | | | | | | | | |
+0| | | | | | | | | | |  
 1| | | | | | | | | | |
 2| | | | | | | | | | |
 3| | | | | | | | | | |
