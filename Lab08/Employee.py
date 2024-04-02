@@ -1,7 +1,7 @@
 # Author: Teddy Nueva Espana
 # Date: 4/2/24
 # I pledge my honor that I have abided by the Stevens honor system
-# Description: 
+# Description: This program defines an Employee class has attributes to be inherited by other classes
 
 class Employee:
     def __init__(self, name, id, rate):

@@ -1,18 +1,21 @@
 # Author: Teddy Nueva Espana
 # Date: 4/2/24
 # I pledge my honor that I have abided by the Stevens honor system
-# Description: 
+# Description: This program utilizes Worker and Supervisor classes that each utilize Employee
+# To create a system for adding and filling out employee information
 
 from Worker import Worker
 from Supervisor import Supervisor
 
 def calcTotalPay(Employee_List):
+    """This function calculates the total pay of all employees in a list"""
     sumTotal = 0
     for employee in Employee_List:
         sumTotal += employee.calcPay(40)    
     return sumTotal
 
 def listEmployees(Employee_List):
+    """This function prints the information of all employees in a list"""
     print("====== Employee List ======")
     
     for person in Employee_List:
