@@ -1,4 +1,5 @@
-class Movie():
+from item import item
+class Movie(item):
     def __init__(self):
         self.__id = 0
         self.__name = ""
