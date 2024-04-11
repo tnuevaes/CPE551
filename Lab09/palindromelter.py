@@ -11,5 +11,9 @@ def palinTest(string):
         
 def main():
     word = input("Enter word to test: ")
-    print(palinTest(word),'The string is a palindrome')
+    result = palinTest(word)
+    if result == False:
+        print('The string is not a palindrome')
+    else:
+        print('The string is a palindrome')
 main()
