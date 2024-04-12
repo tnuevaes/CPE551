@@ -13,7 +13,7 @@ def main():
     word = input("Enter word to test: ")
     result = palinTest(word)
     if result == False:
-        print('The string is not a palindrome')
+        print(f'{word} is not a palindrome')
     else:
-        print('The string is a palindrome')
+        print(f'{word} is a palindrome')
 main()

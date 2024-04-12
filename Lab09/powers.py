@@ -4,6 +4,7 @@
 # Description: Program defines and uses a recursive power function
 
 def powers(base, exponent):
+    print(f"powers({base}, {exponent})")
     if exponent == 1:
         return base
     else:
@@ -13,5 +14,5 @@ def main():
     base = int(input("Enter base: "))
     exp = int(input(("Enter exponent: ")))
     result = powers(base, exp)
-    print(f"result is: {result}")
+    print(f"{base}^{exp} = {result}")
 main()

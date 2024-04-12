@@ -5,18 +5,18 @@
 
 def palinTest(string):
     length = len(string)
-    if length <= 1: #base case
+    if length <= 1: #base case 
         return True
-    elif string[0] != string[-1]:
+    elif string[0] != string[-1]: # Compare beginning of string to end
         return False
     
-    return palinTest(string[1:-1])
+    return palinTest(string[1:-1]) # run recursive fuction with shortened string
         
 def main():
     word = input("Enter word to test: ")
     result = palinTest(word)
     if result == False:
-        print('The string is not a palindrome')
+        print(f'{word} is not a palindrome')
     else:
-        print('The string is a palindrome')
+        print(f'{word} is a palindrome')
 main()
