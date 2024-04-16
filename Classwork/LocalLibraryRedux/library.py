@@ -54,7 +54,38 @@ def main():
             items.append(NewMusic)
 
     for item in items:
-        if isinstance(item, Book)
+        name = item.getName()
+        id = item.getID()
+        genre = item.getGenre()
+        copies = item.getCopies()
+        
+        print(f"""
+name: {name}
+id: {id}
+genre: {genre}
+# of copies: {copies}""")
+        
+        if isinstance(item, Book):
+            author = item.getBookAuthor()
+            pages = item.getPageNum()
+            print("Book")
+            print(f"Author: {author}")
+            print(f"# of pages: {pages}")
+                
+        elif isinstance(item, cd):
+            artist = item.getArtistName()
+            songs = item.getNumSongs()
+            print("CD")
+            print(f"artist: {artist}")
+            print(f"# of songs: {songs}")
+        elif isinstance(item, Movie):
+            length = item.getLength()
+            print("Movie")
+            print(f"Length in minutes: {length}")
+
+    
+            
+            
 
             
 main()
