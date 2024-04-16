@@ -4,9 +4,10 @@ class Movie(item):
         super().__init__(id, name, genre, copies)
         self.__length = 0
 
-
     def getLength(self):
         return self.__length
+    
+    
 
     def setLength(self, length):
         self.__length = length

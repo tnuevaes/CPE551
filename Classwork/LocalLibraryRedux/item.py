@@ -1,30 +1,30 @@
 class item: #Superclass
-    def __init__(self):
-        self.__id = 0
-        self.__name = ""
-        self.__genre = ""
-        self.__copies = 0
+    def __init__(self, id, name, genre, copies):
+        self._id = 0
+        self._name = ""
+        self._genre = ""
+        self._copies = 0
 
     def getID(self):
-        return self.__id
+        return self._id
 
     def getName(self):
-        return self.__name
+        return self._name
 
     def getGenre(self):
-        return self.__genre
+        return self._genre
     
     def getCopies(self):
-        return self.__copies
+        return self._copies
     
     def setID(self, id):
-        self.__id = id
+        self._id = id
 
     def setName(self, name):
-        self.__name = name
+        self._name = name
 
     def setGenre(self, genre):
-        self.__genre = genre
+        self._genre = genre
 
-    def setcopies(self, copies):
-        self.__copies = copies
+    def setCopies(self, copies):
+        self._copies = copies

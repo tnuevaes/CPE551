@@ -1,11 +1,14 @@
-import book
-import movies
-import cd
+from book import Book
+from movies import Movie
+from cd import cd
+import item
 
 def main():
     books = []
     movies = []
     cds = []
+    
+    items = []
     
     Inventory = open("libraryInventory.txt", "r")
     
@@ -16,28 +19,42 @@ def main():
         if lineList[1] == "Book":
             #Book code
             #format: [0] = ID, [1] = Type, [2] = Title, [3] = Author, [4] = Genre, [5] = Pages, [6] = copies 
-            NewBook = book()
+            NewBook = Book(lineList[0], lineList[2], lineList[4], lineList[6])
+
             NewBook.setID(lineList[0])
-            NewBook.setBookName(lineList[2])
-            NewBook.setBookAuthor(lineList[3])
-            NewBook.setBookGenre(lineList[4])
-            NewBook.setPageNum(lineList[5])
+            NewBook.setName(lineList[2])
+            NewBook.setBookAuthor(lineList[3]) #Not superclass
+            NewBook.setGenre(lineList[4])
+            NewBook.setPageNum(lineList[5]) #Not superclass
+            NewBook.setCopies(lineList[6])
+            
+            items.append(NewBook)
+            
         if lineList[1] == "Movie":
             #Movie code
-            NewMovie = movies()
+            NewMovie = Movie(lineList[0], lineList[2], lineList[3], lineList[5])
+
             NewMovie.setID(lineList[0])
             NewMovie.setName(lineList[2])
             NewMovie.setGenre(lineList[3])
-            NewMovie.setLength(lineList[4])
+            NewMovie.setLength(lineList[4]) #Not superclass
             NewMovie.setCopies(lineList[5])
+            items.append(NewMovie)
             
         if lineList[1] == "Music":
             #Music code
-            NewMusic = cd()
+            NewMusic = cd(lineList[0], lineList[2], lineList[4], lineList[6])
+            
             NewMusic.setID(lineList[0])
             NewMusic.setName(lineList[2])
-            NewMusic.setArtistName(lineList[3])
+            NewMusic.setArtistName(lineList[3]) #Not superclass
             NewMusic.setGenre(lineList[4])
-            NewMusic.setNumSongs(lineList[5])
+            NewMusic.setNumSongs(lineList[5]) #Not superclass
             NewMusic.setCopies(lineList[6])
+            items.append(NewMusic)
+
+    for item in items:
+        if isinstance(item, Book)
+
             
+main()
