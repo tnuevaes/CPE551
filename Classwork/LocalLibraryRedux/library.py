@@ -59,16 +59,18 @@ def main():
         genre = item.getGenre()
         copies = item.getCopies()
         
-        print(f"""
+       base_info = f"""
 name: {name}
 id: {id}
 genre: {genre}
-# of copies: {copies}""")
+# of copies: {copies}"""
         
         if isinstance(item, Book):
             author = item.getBookAuthor()
             pages = item.getPageNum()
             print("Book")
+            print(base_info)
+            
             print(f"Author: {author}")
             print(f"# of pages: {pages}")
                 
@@ -76,11 +78,13 @@ genre: {genre}
             artist = item.getArtistName()
             songs = item.getNumSongs()
             print("CD")
+            print(base_info)
             print(f"artist: {artist}")
             print(f"# of songs: {songs}")
         elif isinstance(item, Movie):
             length = item.getLength()
             print("Movie")
+            print(base_info)
             print(f"Length in minutes: {length}")
 
     
